@@ -1,4 +1,38 @@
 # Sports
+
+Summary diagram
+```mermaid
+erDiagram
+    FACULTY_ADVISOR ||--|| SPORTS_SECRETARY : "appoints & oversees"
+    FACULTY_ADVISOR ||--o{ EQUIPMENT_STAFF : "oversees"
+
+    SPORTS_SECRETARY ||--o{ TOURNAMENTS : "creates & manages"
+    SPORTS_SECRETARY ||--o{ CAPTAINS : "approves"
+    SPORTS_SECRETARY ||--o{ AUCTIONEER : "approves"
+    SPORTS_SECRETARY ||--o{ MATCH_SCORERS : "approves"
+
+    IIITT_STUDENTS ||--o{ PROTHYMOS_AUCTION : "self-registers as player"
+    IIITT_STUDENTS ||--o{ COURTS_AND_GYM : "books slots"
+    IIITT_STUDENTS ||--o{ SPORTS_EQUIPMENT : "borrows via QR"
+    IIITT_STUDENTS ||--o{ PICKUP_GAMES : "posts & joins"
+
+    EQUIPMENT_STAFF ||--o{ COURTS_AND_GYM : "marks Open or Closed"
+    EQUIPMENT_STAFF ||--o{ SPORTS_EQUIPMENT : "scans QR to issue & track"
+
+    TOURNAMENTS ||--o{ PROTHYMOS_AUCTION : "hosts"
+    AUCTIONEER ||--o{ PROTHYMOS_AUCTION : "runs live stage"
+    CAPTAINS ||--o{ PROTHYMOS_AUCTION : "bids live with purse"
+    PROTHYMOS_AUCTION ||--o{ TEAMS_AND_SQUADS : "auto-builds rosters"
+
+    CAPTAINS ||--|| TEAMS_AND_SQUADS : "picks Playing XI"
+    TEAMS_AND_SQUADS ||--o{ MATCHES : "competes in"
+    TOURNAMENTS ||--o{ MATCHES : "schedules"
+    MATCH_SCORERS ||--o{ MATCHES : "updates live scores"
+
+    PUBLIC_AND_GUESTS ||--o{ TOURNAMENTS : "views without login"
+    PUBLIC_AND_GUESTS ||--o{ MATCHES : "watches live scores"
+```
+
 ```mermaid
 erDiagram
     %% ==========================================
