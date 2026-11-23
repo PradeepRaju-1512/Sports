@@ -44,6 +44,8 @@ When a user opens the main landing page, the page flows in this exact vertical o
 
 
 2. **Hero Banner (`college.png` + `"IIIT TRICHY SPORTS"`)**
+   <img width="1792" height="1023" alt="college" src="https://github.com/user-attachments/assets/5920097a-ac23-44eb-a99a-1bdf7819ff33" />
+
 * Uses the watermark-free `college.png` artwork as the hero backdrop with dark vignette shading and bold **`IIIT TRICHY SPORTS`** display typography.
 * Paired with the clean top navigation bar (`Overview`, `Archive`, `Current Tournament`, `Auction`, `Live Auction`, `Live` / `Upcoming`, plus compact role/account controls).
 
