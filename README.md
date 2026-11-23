@@ -1,5 +1,5 @@
 # Sports
-
+```mermaid
 erDiagram
     %% ==========================================
     %% 1. USERS & ROLE-BASED ACCESS CONTROL (RBAC)
@@ -224,3 +224,4 @@ erDiagram
     USERS ||--o{ MATCHMAKING_POSTS : "posts"
     SPORTS ||--o{ MATCHMAKING_POSTS : "for"
     FACILITIES ||--o{ MATCHMAKING_POSTS : "at"
+```
