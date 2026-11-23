@@ -1,4 +1,5 @@
 # IIITT Sports App — Master Product Requirements Document (PRD)
+# THIS IS DISCONTINUED AND THE NEXT VERSION HAS A LOT OF INCLUDED FEATURES IN IT
 
 **Product:** IIITT Sports App
 
