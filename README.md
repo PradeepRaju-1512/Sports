@@ -33,6 +33,9 @@ erDiagram
     PUBLIC_AND_GUESTS ||--o{ MATCHES : "watches live scores"
 ```
 
+
+Detailed Diagram
+
 ```mermaid
 erDiagram
     %% ==========================================
