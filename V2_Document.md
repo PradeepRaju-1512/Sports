@@ -153,10 +153,23 @@ Each of the 9 sports has its own dedicated page structured as follows:
 
 ---
 
-## 6. Roles, Campus Operations & Persistence
+## 6. Focused Scope, Roles & Persistence (v2.0)
 
-* **Authority & Roles:** Faculty Advisor / PED oversees the Sports Secretary; Sports Secretary manages tournaments, auctions, notices, and event permissions (Captains, Auction Operator, Match Scorers assigned by the Sports Secretary), alongside Club Secretaries, year-wise Club Coordinators, Equipment/Ground Staff, Students/Players, and public read-only spectators.
-* **Campus Utilities & Vertical Integration:** Supports court/gym booking, QR equipment issuing (tracked assets + bulk stock + overdue blocks + no-dues records), pickup games, player profiles, and vertical flow from registration/induction and auction rosters to lineups, live scoring, and permanent archive records.
-* **Stack & Deployment:** Node.js + TypeScript, PostgreSQL (`DATABASE_URL`), real-time SSE/WebSocket updates, local testing first, GitHub version control, and Render hosting.
+### Scoped-In Core Modules
+* **Landing Page & Notices:** Conditional ≤ 5-word urgent alert banner, `college.png` hero banner with `IIIT TRICHY SPORTS`, brief announcements/notice board, and all 9 Sports Clubs (`Football`, `Cricket`, `Volleyball`, `Kho Kho`, `Kabaddi`, `Badminton`, `Table Tennis`, `Carrom`, `Chess`).
+* **Sports Clubs & Batch Inductions:** Dedicated club pages (`/clubs/:slug`) with a compact upcoming activities list (editable by Club Secretary or Year-Wise Coordinator with instant member notifications), Club Secretary, year-wise Coordinators (`1st`, `2nd`, `3rd`, `4th`, `MTech`), and approval-gated club membership.
+* **Tournaments & Live Scoring:** Built for IIITT's 2 events per year (one per semester) under `Overview` and `Current Tournament`, managed by the Sports Secretary (with optional `Notify everyone` toggle on updates) and scored live on-field by assigned Match Scorers.
+* **Prothymos Auction & Live Stage Engine:** Conditional `Auction` registration (free student sign-up across multiple sports/positions with distinct `CLUB` vs. `NON_CLUB` base prices, post-deadline Sports Secretary editing/search/sorting) + single-operator `Live Auction` synced in real time across all logged-in devices and the auditorium projector.
+* **Dynamic `Live` / `Upcoming` View & Permanent `Archive`:** `Live` tab shown only during active matches/events (replaced by `Upcoming` when nothing is live), plus a year-dropdown `Archive` (`2025`, `2024`, etc.) with winners, 2 runners-up, points tables, matches ordered from Final down to opening match, team rosters dropdown, and search/filters.
+* **Player Profiles:** Clean athlete profiles displaying verified club memberships, tournament appearances, match stats, and career history (excluding facility bookings and equipment logs).
+
+### Deferred / Excluded for Now
+* Campus facility & gym slot booking.
+* QR-based sports equipment issuing, stock tracking, and no-dues exports.
+* "Looking for Players" casual pickup games.
+
+### Authority & Technical Stack
+* **Authority Hierarchy:** Faculty Advisor / PED oversees the Sports Secretary; Sports Secretary manages tournaments, auctions, notices, and event roles (Captains, Auction Operator, Match Scorers); Club Secretaries and year-wise Coordinators manage their respective clubs; public spectators can view live scores, brackets, and archive records without logging in.
+* **Stack & Deployment:** Node.js + TypeScript, PostgreSQL (`DATABASE_URL`), real-time SSE/WebSocket sync, local verification first, GitHub version control, and Render deployment.
 
 ---
